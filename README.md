@@ -4,6 +4,7 @@ This is an AI sketchpad designed to help you master visual thinking, especially 
 # why is it called thinkn.ink?
 That's short for "[thinking ink](https://thinkn.ink)". Literally "ink that thinks". You can use your finger or a stylus to sketch and draw on your mobile device. So you can sketch out the solution to an equation, or diagram/solve a geometry problem. Then you can tap on a button to have an AI tutor read and understand your drawing, and give you step-by-step feedback on your solution. It's not designed to solve the problem for you. It's designed to help you learn to master visual thinking.
 
+
 # why did you create this?
 I love Khan Academy and [watching Sal work](https://www.khanacademy.org/math/algebra2/pythagorean-id/v/pythagorean-trig-identity-from-unit-circle) through problems with the tip of his pen. This visual thinking beautifully demonstrates his mastery of a topic. 
 
@@ -15,11 +16,12 @@ But I believe AI can also help people learn to draw and think with their pen. Th
 
 Checkout this 2 minute video of what it's like to use [thinkn.ink](https://thinkn.ink).
 
-[![What is thinkn.ink?](http://img.youtube.com/vi/OkE2VeRM4mE/0.jpg)](http://www.youtube.com/watch?v=9aoDmeTxXGs "What is thinkn.ink?")
+[![What is thinkn.ink?](http://img.youtube.com/vi/9aoDmeTxXGs/0.jpg)](http://www.youtube.com/watch?v=9aoDmeTxXGs "What is thinkn.ink?")
 
 Yes, there are AI Equation Solver apps out there already. But [thinkn.ink](https://thinkn.ink) is not the same! They're focused on "solving the problems for you". 
 
 Instead, [thinkn.ink](https://thinkn.ink) is focused on helping you "learn to think through the problem for yourself - by thinking with ink". It's primary goal is to help you learn to master visual thinking.
+
 
 # why is this useful?
 This can help you lock in what you learn by going beyond mastery and into the critical overlearning stage. This is a great way to extend existing learning modules. There's a body of [research into overlearning](https://pmc.ncbi.nlm.nih.gov/articles/PMC5323354/) that shows spending 20-30 minutes working beyond the point you feel you've learned a topic lets you lock that in. It helps your brain process and store the new skill as effectively as "sleeping on it". Otherwise, if you move on to learn another new topic, then that can effectively delete or overwrite what you've just learned. I think this was a common problem I faced when I crammed learning. I could easily hold the ideas for a short period. So I filled my brain with as many as I could. But then they just seemed to evaporate over time.
@@ -29,6 +31,7 @@ It can also help you do this regularly through [deliberate and spaced practice](
 Like most people, I've found that lots of the new knowledge I've learned starts to fade. I complete the exercises to demonstrate mastery, but if I don't overlearn and use it practically over the next few weeks and months then it slowly evaporates. I needed a personalised way to regularly practise what I've learned and this is a core part of [thinkn.ink](https://thinkn.ink). Now I have customised AI tutoring that provides an endless supply of personalised exercises and then in depth tutoring based on my own drawings, sketches and solutions. Khan Academy provides the detailed curriculum and [thinkn.ink](https://thinkn.ink) lets me draw and sketch on top of that as much as I want, to build the same type of fluid visual thinking that Sal demonstrates. 
 
 Plus there's something about physically drawing out a problem or equation that makes it more tangible than filling out a form or selecting a multiple choice answer. It engages my motor system and a much broader set of neurons. Now I can regularly practise to continually build upon and lock in everything I learn.
+
 
 # how does it work?
 It uses the [OpenAI chat/completions API](https://platform.openai.com/docs/guides/chat-completions/getting-started) to process the drawing you create using an [HTML canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage).
@@ -41,12 +44,14 @@ I've got a whole range of other fun features I'll be adding to the repos includi
 
 If you're interested in how these LLM's really work under the hood, encoding knowledge and storing facts then I'd encourage you to watch the [3blue1brown series](https://www.3blue1brown.com/lessons/gpt) on this. It really clearly visualises how this works.
 
+
 # why do you mention Khan Academy
 I'm very grateful for everything Sal has taught me.
 
 I've tried reaching out to Sal directly and to some members of his team, but haven't gotten any response. Perhaps they thought it was spam, or perhaps they thought I was trying to sell something to them. But I'd really love to share these ideas with Sal as I think they'd resonate with him.
 
 If you, or anyone you know has a connection into their team then please share this with them.
+
 
 # how does the prompt engineering work?
 The focus was on setting up a friendly and helpful math tutor. It doesn't solve the problem for you, but focuses on feedback for you about how "you" solved it. A key to this was letting the LLM work through the problem itself before it answered.
@@ -62,6 +67,7 @@ I think using LLM's to engineer prompts for LLMs is an interesting area for expe
 At the moment this prompt is also focused solely on mathematics. However, I'm confident you could easily adapt this to cover all sorts of structured knowledge domains and scientific diagramming e.g. biology, chemistry, physics, etc. Especially when you combine this with the "questions" feature described below.
 
 NOTE: Sometimes the API does not return nicely formatted results or parts of the MathML might not completely render. LLMs are non-linear and their results will vary. However, I've found the results are consistently good and usable and I'm sure this will just get better and better over time. If you're not happy with the feedback you got then simply close the overlay and then tap on the feedback button again to get another version 8)
+
 
 # why are some of the features not working?
 The version I use does have a lot of these extra features working. Some of them I've removed in this version because I don't want people to have to setup a domain and SSL certificate just to try this out. Some of the other features I haven't finished testing and refining, so I've removed the code and will release that in the future.
@@ -156,10 +162,16 @@ Then just start drawing equations and sketching out solutions. Once you're ready
 
 If you want the app to work in full screen then just save it to your homescreen and launch it from there.
 
+
 # why isn't is a PWA (progressive web app)?
 The version I use is a PWA. But I've removed this code so it doesn't require any SSL certificates and a domain name to get it running. The goal was to make it as simple as possible for people to try it for themselves.
 
 I'll put this code back in and add a config option that lets you enable this in the future.
+
+
+# why are there bugs?
+This is really just a prototype and for my own personal use. I've regularly use it on my iPhone and it's very stable there. I've tested it on some Android devices and it seems to work fine. But I have noticed some issues with the undo there. I'll do more testing and refine the code as I go, lots of things could be tidied up and simplified. All PRs and suggestions are welcome.
+
 
 # why isn't this available as a working app at [thinkn.ink](https://thinkn.ink)?
 Well, I don't want to cover the OpenAI API costs for you to use this app 8) So I've made this an Open Source solution, then you can install it and use your own OpenAI API token instead.
