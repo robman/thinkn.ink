@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- /* see https://github.com/robman/thinkn.ink for more details */ -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, width=device-width">
+  <link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+  <link rel="apple-touch-icon" href="/img/app-icon-144x144.png">
+  <link rel="stylesheet" href="app.css" />
+  <script>
+  </script>
+  <script src="app.js" type="module"></script>
+  <title>thinkn.ink</title>
+</head>
+<body>
+<div id="loading" class="fv">loading...</div>
+<div id="app" class="fv hidden">
+  <canvas id="crop_canvas"></canvas>
+  <canvas id="canvas"></canvas>
+
+  <div id="menu">
+    <div id="menu1">
+      <span class="button_box"><span id="live" class="button"></span></span>
+      <span class="button_box"><span id="submit" class="button"></span></span>
+      <span class="button_box"><span id="view" class="button"></span></span>
+      <span class="button_box"><span id="hamburger" class="button"></span></span>
+    </div>
+    <div id="menu2">
+      <span class="button_box"><span id="close" class="button"></span></span>
+      <span class="button_box selected"><span id="pen" class="button"></span></span>
+      <span class="button_box"><span id="eraser" class="button"></span></span>
+      <span class="button_box"><span id="undo" class="button"></span></span>
+      <span class="button_box"><span id="clear" class="button"></span></span>
+      <span class="button_box"><span id="camera" class="button"></span></span>
+      <span class="button_box"><span id="export" class="button"></span></span>
+      <span class="button_box"><span id="calculator" class="button"></span></span>
+    </div>
+  </div>
+
+  <div id="overlay"><img id="cropped_image" /></div>
+  <div id="response"><div id="response_close"><p>X</p></div><span></span></div>
+  <div id="processing"><div id="spinner"></div></div>
+</div>
+<div id="error" class="fv hidden">
+  error 
+</div>
+</body>
+</html>
